@@ -1,0 +1,375 @@
+/* --- Estilos Base y Tipografía --- */
+:root {
+    --color-bg: #A9D18E; /* El verde base */
+    --color-primary: #4A8A37; /* Verde oscuro para textos y acentos */
+    --color-light: #EAF7E7; /* Fondo para el formulario */
+    --color-dark-strip: #8FB26A; /* Nuevo color para franjas de header/footer (tono más oscuro que el fondo) */
+    /* ... otras variables ... */
+    --padding-sm: 20px;
+    --padding-lg: 40px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+    font-family:"Quicksand",sans-serif;
+    background-color: var(--color-bg);
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo para PC */
+    margin: 0 auto;
+    background-color: var(--color-bg);
+}
+
+/* --- Estilos para la imagen tipográfica del logo --- */
+
+.logo-container {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center; /* Asegura que la imagen centrada */
+}
+
+.logo-image {
+    max-width: 250px; /* Ajusta este valor al tamaño que desees para tu logo */
+    height: auto;
+    margin: 0 auto;
+    display: block; /* Necesario para que 'margin: 0 auto' funcione si el contenedor no está centrado */
+}
+
+/* Puedes eliminar o dejar comentado el estilo antiguo para .logo-title */
+/*
+.logo-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    text-align: center;
+    color: var(--color-primary);
+    padding-top: var(--padding-sm);
+}
+*/
+/* --- SECCIÓN HEADER / INFO --- */
+.header {
+background-color: var(--color-dark-strip); /* Aplica el fondo más oscuro */
+    padding: var(--padding-sm);
+    text-align: center;
+    
+}
+
+.description {
+    max-width: 600px;
+    margin: 10px auto;
+    font-weight: 400;
+    color: #444; /* color un poco más oscuro para que se lea */
+}
+
+.description-box {
+    background-color: white;
+    padding: 20px 30px;
+    margin: 10px auto;
+    max-width: 800px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.description-box .description {
+    /* Quitamos el margen 'auto' que tenía el párrafo para que centre dentro del box */
+    margin: 0 auto 10px;
+}
+
+.description-box .social-links a {
+    color: var(--color-primary); /* Hacemos los enlaces más visibles */
+    font-size: 0.95rem;
+}
+
+.social-links a {
+    color: #444;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 5px;
+}
+
+/* --- SECCIÓN PRODUCTOS --- */
+.products-section {
+    padding: var(--padding-sm);
+    background-color: var(--color-bg);
+}
+
+.section-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #FFF;
+    background-color: var(--color-primary); /* Fondo del título Productos */
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 25px;
+    margin: 20px auto;
+    width: auto;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    display: block; /* Para que ocupe todo el ancho y funcione el auto-margin */
+}
+
+/* Diseño de Productos con Flexbox (Para Móvil) */
+.product-grid {
+    display: flex;
+    flex-direction: column; /* Apilar productos verticalmente */
+    align-items: center; 
+    
+    /* ELIMINAR O COMENTAR la propiedad 'gap' */
+    /* gap: 20px; */ 
+    
+    padding: 20px 0; 
+    width: 100%;
+}
+
+.product-item {
+    background-color: #fff; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    
+    width: 90%; 
+    max-width: 350px; 
+    
+    /* CLAVE 1: Aplicar margen inferior para crear el espacio */
+    margin: 0 auto 20px auto; /* 0 arriba, auto lados (para centrar), 20px abajo */
+    
+    padding: 15px; 
+    text-align: center;
+}
+
+.product-item .product-image {
+    margin: 0 auto; /* Centrar la imagen */
+    display: block;
+}
+
+.product-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.8rem;
+    color: #FFF;
+    background-color: var(--color-primary);
+    padding: 5px 0;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.product-item.featured .product-title {
+    background-color: #f7d23e; /* Fondo amarillo para el destacado (Girasoles) */
+    color: var(--color-primary);
+    padding: 8px 0;
+    font-size: 2rem;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.price {
+    margin-top: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-primary); /* Usa el color verde oscuro */
+    text-align: center;
+}
+
+/* --- SECCIÓN CONTACTO / FORMULARIO --- */
+.contact-section {
+    background-color: var(--color-bg);
+    padding: var(--padding-sm);
+    text-align: center;
+}
+
+.contact-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    /* CORREGIDO: Invertir colores */
+    color: #FFF; /* Letras BLANCAS */
+    background-color: var(--color-primary); /* Fondo VERDE */
+    /* Fin de la corrección */
+    padding: 5px 20px;
+    border-radius: 25px;
+    margin: 20px auto;
+    width: auto;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    display: inline-block;
+}
+
+.contact-form {
+    background-color: var(--color-light); /* Fondo más claro para el formulario */
+    padding: var(--padding-sm);
+    border-radius: 20px;
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* CORRECCIÓN 1: Estilos comunes para todos los campos (input, textarea, select) */
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* CORRECCIÓN 2: Estilos SÓLO para Selects (Aquí se mantiene la flecha) */
+.contact-form select { 
+    /* Estas propiedades son las que generan la flecha y eliminan el estilo nativo */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200%20-13.2%20-6.1%2017.6%2017.6%200%200%200%20-13.2%206.1L146.2%20202.7%2032.8%2069.4a17.6%2017.6%200%200%200%20-26.4%200%2017.6%2017.6%200%200%200%200%2026.4l130.4%20130.5a17.6%2017.6%200%200%200%2025.3%200L287%2095.8a17.6%2017.6%200%200%200%200%20-26.4z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 10px auto;
+    padding-right: 30px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.send-btn {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.send-btn:hover {
+    background-color: #6a9c58;
+}
+
+/* --- FOOTER --- */
+.footer {
+padding: 20px;
+    text-align: center;
+    background-color: var(--color-dark-strip); /* Aplica el fondo más oscuro */
+}
+.footer-logo {
+    width: 50px;
+    height: auto;
+    margin: 0 auto;
+    opacity: 0.7;
+}
+
+
+/* ================================================= */
+/* MEDIA QUERY para Pantallas de Escritorio (PC) */
+/* ================================================= */
+@media (min-width: 768px) {
+    
+    .products-section {
+        /* Si esta sección tiene un ancho limitado, debe centrarse */
+        max-width: 1200px; 
+        margin: 0 auto; /* CLAVE para centrar la sección */
+        padding: 40px 20px;
+        text-align: center; /* Centrar el título "Productos" */
+    }
+
+    .section-title {
+        margin: 0 auto 30px;
+    }
+    
+.product-grid {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: center; /* CLAVE: Centra los items dentro del contenedor */
+        align-items: flex-start; 
+        gap: 30px; 
+        
+        /* Aseguramos que el contenedor de la fila se centre en la sección */
+        max-width: 1000px;
+        margin: 0 auto; /* CLAVE para centrar el grid */
+        padding: 0 20px;
+    }
+
+    /* 2. Items: Cada producto ocupa el mismo espacio */
+    .product-item {
+        display: inline-block; /* Opcional: Ayuda a asegurar que no se fuerce el bloque */
+        flex: 1; 
+        /* ... */
+    }
+    /* 3. Imagen: Limita el tamaño de la imagen dentro de la tarjeta */
+    .product-item .product-image {
+        max-width: 100%; /* La imagen no debe exceder el ancho de su tarjeta */
+        height: 180px; /* Definimos una altura fija para las imágenes */
+        object-fit: contain; /* Asegura que la imagen se ajuste a la altura sin recortarse ni distorsionarse */
+        margin: 10px auto;
+        display: block; /* Necesario para centrar la imagen */
+    }
+
+    /* Opcional: Si tienes estilos antiguos de Grid que interfieren, puedes anularlos */
+    .product-item.featured {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+    
+    /* Adaptar el contenido de los items en PC */
+.product-item {
+        flex: 1 1 30%; /* Le dice a cada item que crezca y encoja un poco, y que su tamaño base sea alrededor de 1/3 del contenedor */
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        border-radius: 25px;
+        background-color: #fff;
+    }
+/* Estilo del título para Girasoles destacado (CORREGIDO) */
+    .product-item.featured .product-title {
+        /* Eliminamos el fondo amarillo (#f7d23e) */
+        background-color: var(--color-primary); /* Fondo VERDE */
+        color: #FFF; /* Letras BLANCAS */
+        padding: 8px 0;
+        font-size: 2rem;
+        /* El resto de estilos se mantiene para el título del destacado */
+    }
+    
+    /* Aseguramos que los demás títulos también sean verdes con letras blancas */
+    .product-item:not(.featured) .product-title {
+        background-color: var(--color-primary); /* Fondo VERDE */
+        color: #FFF; /* Letras BLANCAS */
+        /* Asegúrate de que el padding también sea similar si lo deseas */
+        padding: 5px 0;
+    }
+    /* ... (El resto del Media Query que no se modifica) ... */
+
+
+/* También ajustamos el estilo en móvil para que todos tengan un fondo de tarjeta si es necesario */
+/* Esto estaba así: 
+.product-item {
+    background-color: var(--color-bg); 
+    ...
+}
+Si quieres que las tarjetas blancas aparezcan también en móvil:
+*/
+@media (max-width: 767px) {
+    .product-item {
+        background-color: #fff; /* Fondo blanco en móvil para todas las tarjetas */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        width: 90%; 
+        max-width: 350px;
+        padding: 15px; /* Ajustar padding */
+    }
+}
+

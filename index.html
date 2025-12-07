@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Floreale — Inicio Responsive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+   <header class="header">
+   <div class="logo-container">
+        <img src="img/logotitle.png" alt="Floreále Logo" class="logo-image">
+    </div>
+    <div class="description-box">
+        <p class="description">
+            Somos una floristería artesanal dedicada a crear arreglos con flores frescas y detalles personalizados. 
+            Envíos locales y pedidos para eventos. Calidad y cariño en cada ramo.
+        </p>
+<div class="social-links">
+    <a href="javascript:void(0)">Instagram</a> | 
+    <a href="javascript:void(0)">Twitter</a> | 
+    <a href="javascript:void(0)">Facebook</a>
+</div>
+    </div>
+    </header>
+        <section class="products-section">
+            <h2 class="section-title">Productos</h2>
+            
+ <div class="product-item">
+        <h3 class="product-title">Tulipanes</h3>
+        <img src="img/tulipanes.png" alt="Ramo de Tulipanes" class="product-image">
+        <p class="price">$35.00</p> 
+    </div>
+    
+    <div class="product-item featured">
+        <h3 class="product-title">Girasoles</h3>
+        <img src="img/girasoles.png" alt="Arreglo de Girasoles" class="product-image">
+        <p class="price">$42.50</p>
+    </div>
+    
+    <div class="product-item">
+        <h3 class="product-title">Rosas</h3>
+        <img src="img/rosas.png" alt="Ramo de Rosas Rojas" class="product-image">
+        <p class="price">$50.00</p>
+    </div>
+
+            </div>
+        </section>
+
+    <section class="contact-section">
+    <h2 class="contact-title">Compra Abajo</h2>
+
+    
+    <form class="contact-form">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        
+        <select name="genero" required>
+            <option value="" disabled selected>Selecciona tu Género</option>
+            <option value="femenino">Femenino</option>
+            <option value="masculino">Masculino</option>
+            <option value="otro">Otro</option>
+            <option value="prefiero_no_decir">Prefiero no decir</option>
+        </select>
+        
+        <select name="producto" required>
+            <option value="" disabled selected>Selecciona el Producto</option>
+            <option value="girasoles">Girasoles</option>
+            <option value="tulipanes">Tulipanes</option>
+            <option value="rosas">Rosas</option>
+            <option value="personalizado">Arreglo Personalizado</option>
+        </select>
+        
+        <textarea name="mensaje" placeholder="Tu mensaje"></textarea>
+<button type="submit" class="send-btn">Enviar</button>
+    </form>
+</section>
+
+<script>
+    // 1. Obtener el formulario usando el ID que le asignamos
+    const formulario = document.getElementById('formulario-contacto');
+
+    // 2. Añadir un 'escuchador' de eventos para cuando el usuario intente enviar el formulario
+    formulario.addEventListener('submit', function(event) {
+        
+        // 3. LA CLAVE: Detiene el envío predeterminado del formulario
+        event.preventDefault();
+
+        // Opcional: Puedes añadir un mensaje en la consola para saber que funcionó
+        console.log('¡Envío interceptado! El formulario no se ha enviado.');
+        
+        // Opcional: Aquí es donde iría la lógica de validación (ej: revisar que todos los campos estén bien)
+        // Y si todo está bien, podrías enviarlo manualmente con: formulario.submit();
+    });
+</script>
+
+        <footer class="footer">
+            <img src="img/florealelogo_small.png" alt="Floreale logo" class="footer-logo">
+        </footer>
+    </div>
+</body>
+</html>
