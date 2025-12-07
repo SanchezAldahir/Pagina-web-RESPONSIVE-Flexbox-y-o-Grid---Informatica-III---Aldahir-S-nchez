@@ -1,2 +1,2 @@
 # Pagina-web-RESPONSIVE-Flexbox-y-o-Grid---Informatica-III---Aldahir-S-nchez
-Pagina web RESPONSIVE (Flexbox y/o Grid) - Informatica III - Aldahir Sánchez
+Asignación universitaria (con apoyo de Inteligencia Artificial)
